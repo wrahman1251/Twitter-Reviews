@@ -4,6 +4,7 @@ from app import app
 from example import extract_words
 import twitter
 from math import pow, exp
+from string import ascii_letters
 
 api = twitter.Api(consumer_key='anQXwx7bfYW82vdSUnWD1Sqtx', consumer_secret='MktlZBECkhFTZKd8Pr2XAVhy4zcHA3LDftHLJlKAsbd3sMYGKD', access_token_key='359708424-GwkMKGJxPmNMi1ucW6QA5ZlclJPb7SGxT3rGJg7h', access_token_secret='NDLFEAipd7VgpJbVN4JVlaDM7xx7hYhHSAsWszoORZzU2')
 
@@ -64,11 +65,11 @@ def my_form_post():
    			advice = 'This person is REALLY positive. Become frnd nao!'
    		else:
    			advice = 'This person is not full of sunshine but I guess they are aite'
-   		return decision, advice
+   		return decision + ' ' + advice
    	else:
    		decision = '-'
    		advice = 'Stay the f*** away from this person. DANGER DANGER!'
-   		return decision, advice
+   		return decision + ' ' + advice
 
 	if __name__ == '__main__':
 		form_post()
