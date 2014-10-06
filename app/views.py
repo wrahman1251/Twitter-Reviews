@@ -59,13 +59,14 @@ def my_form_post():
    	pos_avg = sum(pos_lst)/len(pos_lst)
    	neg_avg = sum(neg_lst)/len(neg_lst)
 
-   	if pos_avg > neg_avg:
+   	if pos_avg > 0.8:
    		decision = '+'
    		if pos_avg > (neg_avg + 0.2):
    			advice = 'This person is REALLY positive. Become frnd nao!'
    		else:
    			advice = 'This person is not full of sunshine but I guess they are aite'
    		return decision + ' ' + advice
+
    	else:
    		decision = '-'
    		advice = 'Stay the f*** away from this person. DANGER DANGER!'

@@ -25,7 +25,7 @@ def extract_words(text):
             text = unicode.replace(text, text[i], ' ')
     return text.encode("ascii").split()
 
-user = "suaixuan"
+user = "negative_nedder"
 
 statuses = api.GetUserTimeline(screen_name=user, count=100, exclude_replies=False)
 
@@ -90,12 +90,12 @@ def main():
             advice = 'This person is REALLY positive. Become frnd nao!'
         else:
             advice = 'This person is not full of sunshine but I guess they are aite'
-        return decision, advice
+        return decision + advice
 
     else:
         decision = '-'
         advice = 'Stay the f*** away from this person. DANGER DANGER!'
-        return decision, advice
+        return decision + advice
 
 if __name__ == '__main__':
     main()
