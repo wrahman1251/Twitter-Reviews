@@ -6,7 +6,7 @@ import twitter
 from math import pow, exp
 from string import ascii_letters
 
-api = twitter.Api(consumer_key='anQXwx7bfYW82vdSUnWD1Sqtx', consumer_secret='MktlZBECkhFTZKd8Pr2XAVhy4zcHA3LDftHLJlKAsbd3sMYGKD', access_token_key='359708424-GwkMKGJxPmNMi1ucW6QA5ZlclJPb7SGxT3rGJg7h', access_token_secret='NDLFEAipd7VgpJbVN4JVlaDM7xx7hYhHSAsWszoORZzU2')
+api = twitter.Api(consumer_key='WEAtvjCzQYb92C8WNPHiD8gTI', consumer_secret='K2kjcE8zmBj7lx1Y1XmsOs4FaVYTwMDcJoM3ULG0fBFqGCL4sH', access_token_key='2842676480-LotHCY0lXhJMfVUrCBZBenJPrfcE58lqG82xJGD', access_token_secret='yVhww4cNX0kBccyOIrQpGBTPpXfukGGW1HopleVuGxAp9')
 
 
 @app.route('/')
@@ -61,10 +61,10 @@ def my_form_post():
 
    	if pos_avg > 0.8:
    		decision = '+'
-   		if pos_avg > (neg_avg + 0.2):
+   		if pos_avg >= 0.95:
    			advice = 'This person is REALLY positive. Become frnd nao!'
    		else:
-   			advice = 'This person is not full of sunshine but I guess they are aite'
+   			advice = 'This person is not full of sunshine but I guess they are aite. frnd them if you want'
    		return decision + ' ' + advice
 
    	else:

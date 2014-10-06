@@ -25,9 +25,9 @@ def extract_words(text):
             text = unicode.replace(text, text[i], ' ')
     return text.encode("ascii").split()
 
-user = "negative_nedder"
+#user = "negative_nedder"
 
-statuses = api.GetUserTimeline(screen_name=user, count=100, exclude_replies=False)
+#statuses = api.GetUserTimeline(screen_name=user, count=100, exclude_replies=False)
 
 
 
